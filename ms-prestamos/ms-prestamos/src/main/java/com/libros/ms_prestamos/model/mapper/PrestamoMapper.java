@@ -1,8 +1,7 @@
-package com.biblioteca.ms_prestamos.model.mapper;
-
-import com.biblioteca.msprestamos.model.Prestamo;
-import com.biblioteca.msprestamos.model.dto.PrestamoRequest;
-import com.biblioteca.msprestamos.model.dto.PrestamoResponse;
+package com.libros.ms_prestamos.model.mapper;
+import com.libros.ms_prestamos.model.Prestamo;
+import com.libros.ms_prestamos.model.dto.PrestamoRequest;
+import com.libros.ms_prestamos.model.dto.PrestamoResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

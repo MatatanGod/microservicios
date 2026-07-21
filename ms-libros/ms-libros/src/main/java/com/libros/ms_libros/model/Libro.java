@@ -1,5 +1,4 @@
-package com.biblioteca.mslibros.model;
-
+package com.libros.ms_libros.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

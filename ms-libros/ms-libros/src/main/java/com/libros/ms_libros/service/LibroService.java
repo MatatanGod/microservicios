@@ -1,10 +1,9 @@
-package com.biblioteca.mslibros.service;
-
-import com.biblioteca.mslibros.model.Libro;
-import com.biblioteca.mslibros.model.dto.LibroRequest;
-import com.biblioteca.mslibros.model.dto.LibroResponse;
-import com.biblioteca.mslibros.model.mapper.LibroMapper;
-import com.biblioteca.mslibros.repository.LibroRepository;
+package com.libros.ms_libros.service;
+import com.libros.ms_libros.model.Libro;
+import com.libros.ms_libros.model.dto.LibroRequest;
+import com.libros.ms_libros.model.dto.LibroResponse;
+import com.libros.ms_libros.model.mapper.LibroMapper;
+import com.libros.ms_libros.repository.LibroRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

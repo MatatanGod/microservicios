@@ -1,5 +1,4 @@
-package com.biblioteca.msprestamos.model;
-
+package com.libros.ms_prestamos.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

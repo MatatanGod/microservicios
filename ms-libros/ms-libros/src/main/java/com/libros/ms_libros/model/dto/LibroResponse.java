@@ -1,5 +1,4 @@
-package com.biblioteca.mslibros.model.dto;
-
+package com.libros.ms_libros.model.dto;
 import lombok.Data;
 
 @Data

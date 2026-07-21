@@ -1,5 +1,4 @@
-package com.biblioteca.ms_prestamos.model.dto;
-
+package com.libros.ms_prestamos.model.dto;
 import lombok.Data;
 
 import java.time.LocalDate;

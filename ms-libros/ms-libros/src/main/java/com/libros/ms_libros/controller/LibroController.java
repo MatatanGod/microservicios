@@ -1,8 +1,7 @@
-package com.biblioteca.mslibros.controller;
-
-import com.biblioteca.mslibros.model.dto.LibroRequest;
-import com.biblioteca.mslibros.model.dto.LibroResponse;
-import com.biblioteca.mslibros.service.LibroService;
+package com.libros.ms_libros.controller;
+import com.libros.ms_libros.model.dto.LibroRequest;
+import com.libros.ms_libros.model.dto.LibroResponse;
+import com.libros.ms_libros.service.LibroService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

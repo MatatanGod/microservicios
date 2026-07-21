@@ -1,5 +1,4 @@
-package com.biblioteca.mslibros.model.mapper;
-
+package com.libros.ms_libros.model.mapper;
 import com.biblioteca.mslibros.model.Libro;
 import com.biblioteca.mslibros.model.dto.LibroRequest;
 import com.biblioteca.mslibros.model.dto.LibroResponse;
