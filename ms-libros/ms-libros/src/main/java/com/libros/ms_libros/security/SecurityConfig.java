@@ -1,4 +1,4 @@
-package com.biblioteca.mslibros.security;
+package com.libros.ms_libros.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

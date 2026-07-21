@@ -1,4 +1,4 @@
-package com.libros.ms_prestamos.model;
+package com.libros.ms_prestamos.model.dto;
 import lombok.Data;
 
 @Data

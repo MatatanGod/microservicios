@@ -1,7 +1,7 @@
 package com.libros.ms_libros.model.mapper;
-import com.biblioteca.mslibros.model.Libro;
-import com.biblioteca.mslibros.model.dto.LibroRequest;
-import com.biblioteca.mslibros.model.dto.LibroResponse;
+import com.libros.ms_libros.model.Libro;
+import com.libros.ms_libros.model.dto.LibroRequest;
+import com.libros.ms_libros.model.dto.LibroResponse;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring") // <-- MapStruct genera la implementación en tiempo de compilación
