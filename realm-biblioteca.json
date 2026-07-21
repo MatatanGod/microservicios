@@ -1,0 +1,27 @@
+{
+  "realm": "biblioteca-realm",
+  "enabled": true,
+  "clients": [
+    {
+      "clientId": "biblioteca-api",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "bearerOnly": false,
+      "secret": "biblioteca-secret",
+      "standardFlowEnabled": false,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": true
+    }
+  ],
+  "roles": { "realm": [ { "name": "USER" }, { "name": "ADMIN" } ] },
+  "users": [
+    {
+      "username": "yonatan",
+      "enabled": true,
+      "emailVerified": true,
+      "credentials": [ { "type": "password", "value": "123456", "temporary": false } ],
+      "realmRoles": ["USER", "ADMIN"]
+    }
+  ]
+}

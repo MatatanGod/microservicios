@@ -1,0 +1,70 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.0.5
+    container_name: keycloak
+    command: start-dev --import-realm
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    ports:
+      - "9090:8080"
+    volumes:
+      - ./realm-biblioteca.json:/opt/keycloak/data/import/realm-biblioteca.json
+
+  ms-configserver:
+    build: ./ms-configserver
+    container_name: ms-configserver
+    ports:
+      - "8888:8888"
+
+  ms-eureka:
+    build: ./ms-eureka
+    container_name: ms-eureka
+    ports:
+      - "8761:8761"
+    depends_on:
+      - ms-configserver
+
+  ms-libros:
+    build: ./ms-libros
+    container_name: ms-libros
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mysql
+      - ms-eureka
+      - ms-configserver
+      - keycloak
+
+  ms-prestamos:
+    build: ./ms-prestamos
+    container_name: ms-prestamos
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8082:8082"
+    depends_on:
+      - ms-libros
+
+  gateway:
+    build: ./gateway
+    container_name: gateway
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8080:8080"
+    depends_on:
+      - ms-libros
+      - ms-prestamos
