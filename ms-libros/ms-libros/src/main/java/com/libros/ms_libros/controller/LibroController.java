@@ -7,8 +7,16 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
+@RequestMapping("/libros")
 public class LibroController {
-    private LibroService libroService;
+
+    private final LibroService libroService;
+
+    // Inyección de dependencia por constructor
+    public LibroController(LibroService libroService) {
+        this.libroService = libroService;
+    }
 
     @GetMapping
     public List<LibroResponse> listar() {
@@ -37,6 +45,6 @@ public class LibroController {
 
     @PutMapping("/{id}/descontar-stock")
     public void descontarStock(@PathVariable Long id) {
-        libroService.descontarStock(id); // <-- endpoint interno, lo llama ms-prestamos vía Feign
+        libroService.descontarStock(id); // Endpoint interno llamado por ms-prestamos vía Feign
     }
 }

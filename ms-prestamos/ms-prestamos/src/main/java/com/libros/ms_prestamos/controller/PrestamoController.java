@@ -12,7 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/prestamos")
 @RequiredArgsConstructor
-@Tag(name = "Préstamos", description = "Gestión de préstamos de libros")
+@Tag(name = "Prestamos", description = "Gestión de préstamos de libros")
 public class PrestamoController {
 
     private final PrestamoService prestamoService;
