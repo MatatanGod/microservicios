@@ -4,7 +4,7 @@ import com.libros.ms_libros.model.dto.LibroRequest;
 import com.libros.ms_libros.model.dto.LibroResponse;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring") // <-- MapStruct genera la implementación en tiempo de compilación
+@Mapper(componentModel = "spring")
 public interface LibroMapper {
     Libro toEntity(LibroRequest request);
     LibroResponse toResponse(Libro libro);

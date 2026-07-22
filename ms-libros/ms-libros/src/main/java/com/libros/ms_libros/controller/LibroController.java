@@ -1,20 +1,14 @@
 package com.libros.ms_libros.controller;
+
 import com.libros.ms_libros.model.dto.LibroRequest;
 import com.libros.ms_libros.model.dto.LibroResponse;
 import com.libros.ms_libros.service.LibroService;
-import io.swagger.v3.oas.annotations.tags.Tag;
-import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("/libros")
-@RequiredArgsConstructor
-@Tag(name = "Libros", description = "Gestión de libros de la biblioteca") // <-- aparece agrupado en Swagger
 public class LibroController {
-
-    private final LibroService libroService;
+    private LibroService libroService;
 
     @GetMapping
     public List<LibroResponse> listar() {
